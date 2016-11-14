@@ -11,7 +11,7 @@ RUN mkdir /workdir
 RUN curl https://grafanarel.s3.amazonaws.com/builds/grafana-${GRAFANA_VERSION}.linux-x64.tar.gz >> /tmp/grafana.tar.gz
 RUN tar -zxvf /tmp/grafana.tar.gz -C /workdir/
 RUN mv /workdir/grafana* /workdir/grafana
-ADD config/defaults.ini /workdir/defaults.ini
+ADD config/ /workdir/
 ADD plugins/ /workdir/grafana/data/plugins/
 ADD entrypoint.sh /workdir/entrypoint.sh
 RUN chmod -R a+rwx /workdir/
