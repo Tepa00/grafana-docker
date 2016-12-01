@@ -15,5 +15,6 @@ ADD config/ /workdir/
 ADD plugins/ /workdir/grafana/data/plugins/
 ADD entrypoint.sh /workdir/entrypoint.sh
 RUN chmod -R a+rwx /workdir/
+ADD img/ /workdir/grafana/public/img/
 ENTRYPOINT ["/workdir/entrypoint.sh"]
 CMD ["/workdir/grafana/bin/grafana-server"]
