@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Jesse Ikola <jesse.ikola@jubic.fi>
 
-ENV GRAFANA_VERSION 3.1.1-1470047149
+ENV GRAFANA_VERSION 4.1.1-1484211277
 
 RUN apt-get update && \
   apt-get install -y curl gettext-base && \
